@@ -3,6 +3,22 @@ Logstash Plugin for Pushover output
 
 This is a plugin for [logstash](https://www.elastic.co/products/logstash) to send events to [Pushover](https://pushover.net). It's not an official Pushover-service.
 
+Usage
+---
+
+There are two required parameters that need to be set, so at the very least the
+following is required:
+
+    output {
+		pushover {
+			app_token => "YOUR_UNIQUE_APP_TOKEN"
+			user_key => "RECEIVERS_UNIQUE_USER_KEY"
+		}
+	}
+
+No futher configuration parameters that are listed on [the API specification](https://pushover.net/api)
+are currently enabled.
+
 ToDo
 ---
 
